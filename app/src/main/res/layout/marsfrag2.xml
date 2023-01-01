@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+
+
+
+    <RelativeLayout
+        android:layout_width="330dp"
+        android:id="@+id/viewPager"
+        android:layout_height="600dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="90dp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/mainborder">
+        <androidx.cardview.widget.CardView
+            android:layout_width="270dp"
+            android:id="@+id/roundedImageView2"
+            android:layout_height="240dp"
+            app:cardCornerRadius="18dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="30dp"
+            android:elevation="50dp"
+            app:cardElevation="30dp">
+
+            <ImageView
+                android:id="@+id/roundedImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/marssec"
+                android:background="@color/white"
+                android:scaleType="centerCrop"
+                />
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/roundedImageView2"
+            android:layout_alignTop="@+id/roundedImageView2"
+            android:layout_alignEnd="@+id/roundedImageView2"
+            android:layout_marginStart="97dp"
+            android:layout_marginTop="246dp"
+            android:layout_marginEnd="84dp"
+            android:layout_marginBottom="43dp"
+            android:fontFamily="@font/andika_new_basic_bold"
+            android:text="CubeRover"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            android:textStyle="bold">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/text4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="300dp"
+            android:fontFamily="@font/acme"
+            android:textAlignment="center"
+            android:text="Some people at NASA thought of a really cool idea. They're going to send a rover to the moon, but it will have to hibernate through the long, cold lunar night. That's because during the day, it will be too hot for the rover to function, and during the night it will be too cold. But now, they have a way to keep the rover on the moon
+Astrobotic is a company that is based in Pittsburgh, PACubeRover is a kind of robot that people can control from Earth to go explore the moon.CubeRover is a kind of robot that people can control from Earth to go explore the moon.
+"
+            android:textColor="@color/white"
+            android:textSize="16dp">
+
+
+        </TextView>
+        <RelativeLayout
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:layout_marginTop="530dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/round">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Theme"
+                android:textSize="12dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/acme"
+                android:layout_marginStart="30dp"
+                android:textColor="#1C0B39">
+
+            </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Beyond Earth"
+                android:textSize="12dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/acme"
+                android:layout_marginStart="20dp"
+                android:textColor="@color/white">
+
+            </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Image Credits"
+                android:textSize="12dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/acme"
+                android:layout_marginStart="190dp"
+                android:textColor="#1C0B39">
+
+            </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lorem Ipsum"
+                android:textSize="12dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/acme"
+                android:layout_marginStart="190dp"
+                android:textColor="@color/white">
+
+            </TextView>
+
+        </RelativeLayout>
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>
+

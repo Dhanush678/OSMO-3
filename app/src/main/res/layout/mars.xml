@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mars"
+    android:background="@drawable/bg">
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:background="@color/trans"
+        android:fontFamily="@font/acme"
+        android:text="Daily News"
+
+
+        android:textColor="@color/white"
+        android:textSize="26dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </Button>
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="5dp"
+        android:background="@drawable/hamburger"
+        app:layout_constraintBottom_toBottomOf="@+id/button2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/button2">
+
+    </Button>
+
+
+    <com.example.osmo_3.verticalviewpager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </com.example.osmo_3.verticalviewpager>
+
+    <LinearLayout
+        android:id="@+id/layoutView"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="677dp"
+        android:layout_marginBottom="15dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/pager"
+        app:layout_constraintTop_toTopOf="@+id/pager">
+
+    </LinearLayout>
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:text="Swipe Up and Down To Go To Next Article"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/layoutView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/layoutView">
+
+    </TextView>
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
