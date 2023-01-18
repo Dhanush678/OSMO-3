@@ -46,7 +46,7 @@ public class MainActivity extends DrawerBaseActivity {
         ActionBar actionBar = getSupportActionBar();
 
         // Customize the back button
-        actionBar.setHomeAsUpIndicator(R.drawable.hamburger);
+        actionBar.setHomeAsUpIndicator(R.mipmap.hamburger);
 
         // showing the back button in action bar
         actionBar.setDisplayHomeAsUpEnabled(true);

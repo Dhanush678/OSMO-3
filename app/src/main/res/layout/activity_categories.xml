@@ -13,10 +13,14 @@
 
         <Button
             android:id="@+id/mainactivity"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignLeft="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_8sdp"
 
-            android:background="@drawable/close">
+            android:layout_marginEnd="60dp"
+
+            android:background="@mipmap/close">
 
         </Button>
 
@@ -28,6 +32,7 @@
             android:layout_marginLeft="110dp"
             android:background="@color/trans"
             android:padding="10dp"
+            android:id="@+id/categories"
             android:fontFamily="@font/allerta"
             android:text="Categories"
             android:textColor="@color/white"

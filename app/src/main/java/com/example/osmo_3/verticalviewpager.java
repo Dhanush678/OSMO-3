@@ -39,6 +39,10 @@ public class verticalviewpager extends ViewPager {
         getIntercombio(ev);
         return intercepted;
     }
+    @Override
+    public boolean canScrollHorizontally(int direction) {
+        return false;
+    }
 
     @Override
     public boolean onTouchEvent(MotionEvent ev) {

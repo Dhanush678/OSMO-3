@@ -51,7 +51,11 @@ public class DrawerBaseActivity extends categories {
         Human.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 startActivity(new Intent(getApplicationContext(), human.class));
+                drawerLayout.closeDrawer(Gravity.LEFT,false);
+
+
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 finish();
             }
@@ -60,6 +64,9 @@ public class DrawerBaseActivity extends categories {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                drawerLayout.closeDrawer(Gravity.LEFT,false);
+
+
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 finish();
             }
@@ -75,6 +82,9 @@ public class DrawerBaseActivity extends categories {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), Technology.class));
+                drawerLayout.closeDrawer(Gravity.LEFT,false);
+
+
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 finish();
             }
@@ -83,6 +93,9 @@ public class DrawerBaseActivity extends categories {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), mars.class));
+                drawerLayout.closeDrawer(Gravity.LEFT,false);
+
+
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 finish();
             }
@@ -91,6 +104,9 @@ public class DrawerBaseActivity extends categories {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), earth.class));
+                drawerLayout.closeDrawer(Gravity.LEFT,false);
+
+
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 finish();
             }
@@ -99,6 +115,9 @@ public class DrawerBaseActivity extends categories {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), futureclass.class));
+                drawerLayout.closeDrawer(Gravity.LEFT,false);
+
+
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 finish();
             }
@@ -110,6 +129,9 @@ public class DrawerBaseActivity extends categories {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), TermsandConditions.class));
+                drawerLayout.closeDrawer(Gravity.LEFT,false);
+
+
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 finish();
             }
@@ -122,6 +144,9 @@ public class DrawerBaseActivity extends categories {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), FAQ.class));
+                drawerLayout.closeDrawer(Gravity.LEFT,false);
+
+
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 finish();
             }
@@ -131,6 +156,8 @@ public class DrawerBaseActivity extends categories {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), privacy.class));
+                drawerLayout.closeDrawer(Gravity.LEFT,false);
+
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
 
                 onBackPressed();
@@ -148,6 +175,6 @@ public class DrawerBaseActivity extends categories {
 
     @Override
     public void onBackPressed() {
-        drawerLayout.closeDrawer(Gravity.START, false);
+        drawerLayout.closeDrawer(Gravity.LEFT, false);
     }
 }
