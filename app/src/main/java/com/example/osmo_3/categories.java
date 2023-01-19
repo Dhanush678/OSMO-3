@@ -11,6 +11,8 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class categories extends AppCompatActivity {
 
     float x1,x2,y1,y2;
@@ -20,6 +22,7 @@ public class categories extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_categories);
         Button back=findViewById(R.id.mainactivity);
         TextView terms ;
@@ -33,6 +36,7 @@ public class categories extends AppCompatActivity {
         CardView Mars=findViewById(R.id.Mars);
         CardView InformationAge =findViewById(R.id.InformationAge);
         CardView Startups=findViewById(R.id.Startups);
+        TextView signout =findViewById(R.id.logout);
         CardView Future=findViewById(R.id.Future);
         Earth.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -128,6 +132,13 @@ public class categories extends AppCompatActivity {
                 overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
 
                 onBackPressed();
+            }
+        });
+        signout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FirebaseAuth.getInstance().signOut();//logout
+                startActivity(new Intent(getApplicationContext(),loginactivity.class));
             }
         });
        

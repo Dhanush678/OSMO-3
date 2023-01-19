@@ -17,10 +17,11 @@
             android:layout_height="50dp"
             android:layout_alignLeft="@dimen/_14sdp"
             android:layout_marginTop="@dimen/_8sdp"
+            android:scaleType = "center"
 
             android:layout_marginEnd="60dp"
 
-            android:background="@mipmap/close">
+            android:background="@drawable/close">
 
         </Button>
 
@@ -571,7 +572,6 @@
             android:textColor="@color/white"
             android:id="@+id/terms"
             android:fontFamily="@font/acme"
-
             android:text="Terms and Conditions"
             android:textSize="12dp">
 
@@ -580,7 +580,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Privacy and Policy"
-            android:layout_marginLeft="150dp"
+            android:layout_marginLeft="130dp"
             android:id="@+id/privacy"
             android:layout_marginBottom="10dp"
             android:textColor="@color/white"
@@ -593,7 +593,19 @@
             android:layout_height="wrap_content"
             android:text="FAQ"
             android:id="@+id/FAQ"
-            android:layout_marginLeft="300dp"
+            android:layout_marginLeft="230dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/acme"
+            android:textSize="12dp">
+
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign Out"
+            android:id="@+id/logout"
+            android:layout_marginLeft="280dp"
             android:layout_marginBottom="10dp"
             android:textColor="@color/white"
             android:fontFamily="@font/acme"
