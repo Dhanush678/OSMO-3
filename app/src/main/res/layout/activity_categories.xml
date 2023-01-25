@@ -575,7 +575,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Privacy and Policy"
-            android:layout_marginLeft="130dp"
+            android:layout_marginLeft="150dp"
             android:id="@+id/privacy"
             android:layout_marginBottom="10dp"
             android:textColor="@color/white"
@@ -588,19 +588,7 @@
             android:layout_height="wrap_content"
             android:text="FAQ"
             android:id="@+id/FAQ"
-            android:layout_marginLeft="240dp"
-            android:layout_marginBottom="10dp"
-            android:textColor="@color/white"
-            android:fontFamily="@font/acme"
-            android:textSize="12dp">
-
-        </TextView>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Sign out"
-            android:id="@+id/signout"
-            android:layout_marginLeft="280dp"
+            android:layout_marginLeft="300dp"
             android:layout_marginBottom="10dp"
             android:textColor="@color/white"
             android:fontFamily="@font/acme"

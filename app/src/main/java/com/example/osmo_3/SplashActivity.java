@@ -22,11 +22,7 @@ public class SplashActivity extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
         getWindow().setStatusBarColor(ContextCompat.getColor(SplashActivity.this,R.color.splash));
 
-        imageView = findViewById(R.id.image_view);
-        animationUptoDown = AnimationUtils.loadAnimation(SplashActivity.this,R.anim.uptodownanim);
-        animationDownToUp = AnimationUtils.loadAnimation(SplashActivity.this,R.anim.downtotopanim);
 
-        imageView.setAnimation(animationUptoDown);
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -34,6 +30,6 @@ public class SplashActivity extends AppCompatActivity {
                 overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
                 finish();
             }
-        },2000);
+        },800);
     }
 }

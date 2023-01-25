@@ -38,7 +38,7 @@
                     android:layout_centerVertical="true"
                     android:background="@color/trans"
                     android:layout_marginEnd="30dp"
-                    android:layout_marginBottom="10dp"
+                    android:layout_marginBottom="20dp"
                     android:fontFamily="@font/acme"
                     android:text="Daily News"
 

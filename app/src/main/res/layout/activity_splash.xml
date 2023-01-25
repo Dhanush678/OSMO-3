@@ -11,11 +11,11 @@
     <ImageView
         android:id="@+id/image_view"
         android:layout_width="match_parent"
-        android:layout_height="225dp"
+        android:layout_height="match_parent"
         android:layout_alignParentTop="true"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="120dp"
+        android:layout_marginStart="80dp"
         android:layout_marginTop="252dp"
         android:layout_marginBottom="254dp"
         android:src="@drawable/osmo"
