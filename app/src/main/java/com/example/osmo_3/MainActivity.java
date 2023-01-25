@@ -13,6 +13,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
+
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.material.navigation.NavigationBarView;
 
 import androidx.viewpager.widget.PagerAdapter;
@@ -32,6 +37,8 @@ public class MainActivity extends DrawerBaseActivity {
     int counter =0;
     float x1,x2,y1,y2;
     private PagerAdapter pagerAdapter;
+    GoogleSignInOptions gso;
+    GoogleSignInClient gsc;
 
 
 
@@ -39,6 +46,14 @@ public class MainActivity extends DrawerBaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
+        gsc = GoogleSignIn.getClient(this,gso);
+
+        GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(this);
+        if(acct!=null){
+
+        }
+
 
 
         activityMainBinding = ActivityMainBinding.inflate(getLayoutInflater());

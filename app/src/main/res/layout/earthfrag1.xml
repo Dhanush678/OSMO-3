@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context=".earth"
 
     >
 
@@ -99,10 +100,12 @@ When things like satellites or rockets stop working, they can fall out of the sk
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Image Credits"
+                android:text="Tap to View"
                 android:textSize="12dp"
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/acme"
+                android:id="@+id/vieobutton"
+
                 android:layout_marginStart="190dp"
                 android:textColor="#1C0B39">
 
@@ -110,9 +113,10 @@ When things like satellites or rockets stop working, they can fall out of the sk
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Lorem Ipsum"
+                android:text="see the Video"
                 android:textSize="12dp"
                 android:layout_marginTop="30dp"
+                android:id="@+id/videobutton2"
                 android:fontFamily="@font/acme"
                 android:layout_marginStart="190dp"
                 android:textColor="@color/white">

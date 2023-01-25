@@ -11,17 +11,33 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+
 public class categories extends AppCompatActivity {
 
     float x1,x2,y1,y2;
-
+    GoogleSignInOptions gso;
+    GoogleSignInClient gsc;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_categories);
+        gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
+        gsc = GoogleSignIn.getClient(this,gso);
+
+        GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(this);
+        if(acct!=null){
+
+        }
         Button back=findViewById(R.id.mainactivity);
+        TextView signOutBtn = findViewById(R.id.signout);
         TextView terms ;
         LinearLayout Earth=findViewById(R.id.earth2_0);
         CardView Energy =findViewById(R.id.Energy);
@@ -120,6 +136,12 @@ public class categories extends AppCompatActivity {
                 finish();
             }
         });
+        signOutBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                signOut();
+            }
+        });
         TextView privacy=findViewById(R.id.privacy);
         privacy.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -130,7 +152,17 @@ public class categories extends AppCompatActivity {
                 onBackPressed();
             }
         });
+
        
+    }
+    void signOut(){
+        gsc.signOut().addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(Task<Void> task) {
+                finish();
+                startActivity(new Intent(categories.this,loginactivity.class));
+            }
+        });
     }
     public boolean onTouchEvent(MotionEvent touchEvent){
 
@@ -156,5 +188,6 @@ public class categories extends AppCompatActivity {
 
         return;
     }
+
   
 }

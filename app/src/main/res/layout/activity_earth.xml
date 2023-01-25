@@ -23,6 +23,7 @@
         android:layout_marginTop="677dp"
         android:layout_marginBottom="15dp"
         android:gravity="center"
+android:onClick="playvideo"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="@+id/pager"
         app:layout_constraintTop_toTopOf="@+id/pager">
@@ -34,8 +35,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="bottom"
-        android:text="Swipe Up and Down To Go To Next Article"
+        android:text="Tap to see the video"
         android:textColor="@color/white"
+        android:onClick="playvideo"
         app:layout_constraintBottom_toBottomOf="@+id/layoutView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/layoutView">

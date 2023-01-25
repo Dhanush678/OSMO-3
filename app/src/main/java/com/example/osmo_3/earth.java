@@ -1,5 +1,5 @@
 package com.example.osmo_3;
-
+import com.example.osmo_3.beyoundearth.earthfrag1;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -10,6 +10,8 @@ import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.example.osmo_3.Mars_fragments.marsfrag3;
 import com.example.osmo_3.beyoundearth.earthfrag1;
@@ -22,7 +24,7 @@ import com.example.osmo_3.databinding.ActivityMainBinding;
 import java.util.ArrayList;
 import java.util.List;
 
-public class earth extends DrawerBaseActivity {
+public class earth extends DrawerBaseActivity  {
     ActivityEarthBinding activityEarthBinding;
     private verticalviewpager viewpager;
     int counter =0;
@@ -31,12 +33,14 @@ public class earth extends DrawerBaseActivity {
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_earth);
 
         activityEarthBinding = ActivityEarthBinding.inflate(getLayoutInflater());
         setContentView(activityEarthBinding.getRoot());
         ActionBar actionBar = getSupportActionBar();
+
 
         // Customize the back button
         actionBar.setHomeAsUpIndicator(R.drawable.hamburger);
@@ -58,5 +62,10 @@ public class earth extends DrawerBaseActivity {
     public void onBackPressed() {
         startActivity(new Intent(earth.this, categories.class));
         return;
+    }
+
+    public void playvideo(View view) {
+        startActivity(new Intent(getApplicationContext(),videoplayer.class));
+        finish();
     }
 }

@@ -14,11 +14,19 @@ import androidx.cardview.widget.CardView;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.navigation.NavigationView;
 
 
 public class DrawerBaseActivity extends categories {
     DrawerLayout drawerLayout;
+    GoogleSignInOptions gso;
+    GoogleSignInClient gsc;
 
     @Override
     public void setContentView(View view) {
@@ -27,12 +35,21 @@ public class DrawerBaseActivity extends categories {
         FrameLayout container = drawerLayout.findViewById(R.id.activitycontainer);
         container.addView(view);
         super.setContentView(drawerLayout);
+        TextView signOutBtn = findViewById(R.id.signout);
+
         Toolbar toolbar = drawerLayout.findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         LinearLayout Human = findViewById(R.id.Human2);
         LinearLayout Earth = findViewById(R.id.earth2_0);
         CardView Energy = findViewById(R.id.Energy);
         Button back = findViewById(R.id.mainactivity);
+        gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
+        gsc = GoogleSignIn.getClient(this,gso);
+
+        GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(this);
+        if(acct!=null){
+
+        }
         TextView terms;
 
         CardView beyoundearth = findViewById(R.id.Beyondearth);
@@ -69,6 +86,12 @@ public class DrawerBaseActivity extends categories {
             public void onClick(View v) {
                 drawerLayout.closeDrawers();
 
+            }
+        });
+        signOutBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                signOut();
             }
         });
         Technology.setOnClickListener(new View.OnClickListener() {
@@ -144,6 +167,15 @@ public class DrawerBaseActivity extends categories {
             getSupportActionBar().setTitle(titleString);
         }
 
+    }
+    void signOut(){
+        gsc.signOut().addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(Task<Void> task) {
+                finish();
+                startActivity(new Intent(DrawerBaseActivity.this,loginactivity.class));
+            }
+        });
     }
 
     @Override
