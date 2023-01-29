@@ -6,36 +6,48 @@
     android:layout_height="match_parent"
     android:background="@drawable/bg"
     tools:context=".categories">
-    <RelativeLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp">
+        android:layout_height="80dp">
 
 
         <Button
             android:id="@+id/mainactivity"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
 
-            android:background="@drawable/close">
+
+            android:layout_marginEnd="56dp"
+            android:background="@mipmap/close"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/button3"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.533">
 
         </Button>
 
         <Button
+            android:id="@+id/button3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="110dp"
             android:background="@color/trans"
-            android:padding="10dp"
             android:fontFamily="@font/allerta"
+            android:padding="10dp"
             android:text="Categories"
             android:textColor="@color/white"
             android:textSize="20dp"
-            android:textStyle="bold">
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
         </Button>
-    </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -575,7 +587,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Privacy and Policy"
-            android:layout_marginLeft="150dp"
+            android:layout_marginLeft="140dp"
             android:id="@+id/privacy"
             android:layout_marginBottom="10dp"
             android:textColor="@color/white"
@@ -588,7 +600,19 @@
             android:layout_height="wrap_content"
             android:text="FAQ"
             android:id="@+id/FAQ"
-            android:layout_marginLeft="300dp"
+            android:layout_marginLeft="250dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/acme"
+            android:textSize="12dp">
+
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SignOut"
+            android:id="@+id/signout"
+            android:layout_marginLeft="290dp"
             android:layout_marginBottom="10dp"
             android:textColor="@color/white"
             android:fontFamily="@font/acme"

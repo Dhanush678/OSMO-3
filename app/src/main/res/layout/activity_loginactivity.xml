@@ -16,7 +16,7 @@
         android:orientation="vertical"
         android:src="@drawable/osmo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -52,7 +52,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/andika_new_basic_bold"
-                android:text="Sign in to account"
+                android:text="Sign in to Account"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="24sp"
@@ -66,31 +66,31 @@
 
             <Button
                 android:id="@+id/google_btn"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:layout_marginTop="36dp"
                 android:layout_marginBottom="11dp"
-                android:background="@drawable/google"
+                android:background="@mipmap/google"
                 app:layout_constraintBottom_toTopOf="@+id/Email"
                 app:layout_constraintEnd_toEndOf="@+id/textView"
-                app:layout_constraintHorizontal_bias="0.504"
+                app:layout_constraintHorizontal_bias="0.496"
                 app:layout_constraintStart_toStartOf="@+id/textView"
                 app:layout_constraintTop_toTopOf="@+id/textView"
-                app:layout_constraintVertical_bias="0.04">
+                app:layout_constraintVertical_bias="0.032">
 
             </Button>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="32dp"
+                android:layout_marginBottom="40dp"
                 android:fontFamily="@font/andika_new_basic_bold"
                 android:text="or use your email account"
                 android:textColor="@color/yellow"
                 android:textSize="16dp"
                 app:layout_constraintBottom_toTopOf="@+id/Email"
                 app:layout_constraintEnd_toEndOf="@+id/google_btn"
-                app:layout_constraintHorizontal_bias="0.482"
+                app:layout_constraintHorizontal_bias="0.473"
                 app:layout_constraintStart_toStartOf="@+id/google_btn">
 
             </TextView>
@@ -104,7 +104,7 @@
                 android:textColor="@color/white"
                 android:textSize="18dp"
                 app:layout_constraintEnd_toEndOf="@+id/Email"
-                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintHorizontal_bias="0.004"
                 app:layout_constraintStart_toStartOf="@+id/Email"
                 app:layout_constraintTop_toBottomOf="@+id/google_btn">
 
@@ -116,7 +116,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
-                android:layout_marginBottom="264dp"
+                android:layout_marginBottom="284dp"
                 android:background="@drawable/border"
                 android:backgroundTint="#48FFFFFF"
                 android:drawableStart="@drawable/ic_baseline_email_24"
@@ -131,7 +131,7 @@
                 android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintHorizontal_bias="0.166"
 
                 app:layout_constraintStart_toStartOf="parent" />
 
@@ -178,7 +178,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="40dp"
                 android:layout_marginEnd="16dp"
                 android:background="@drawable/gradient"
                 android:fontFamily="@font/aclonica"
@@ -187,6 +187,7 @@
                 android:textColor="@color/white"
                 android:textSize="15sp"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/password" />
 
@@ -234,13 +235,13 @@
                 android:id="@+id/forgotPassword"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="7dp"
+                android:layout_marginTop="12dp"
                 android:fontFamily="@font/aclonica"
                 android:text="Forgot Password ?"
                 android:textColor="@color/white"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="@+id/loginBtn"
-                app:layout_constraintHorizontal_bias="0.985"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="@+id/loginBtn"
                 app:layout_constraintTop_toBottomOf="@+id/password" />
         </androidx.constraintlayout.widget.ConstraintLayout>

@@ -128,7 +128,7 @@ public class loginactivity extends AppCompatActivity {
         mCreateBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),Register.class));
+               startActivity(new Intent(getApplicationContext(),Register.class));
                 overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right);
                 finish();
             }

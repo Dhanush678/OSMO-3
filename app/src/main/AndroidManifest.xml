@@ -70,7 +70,7 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".MainActivity"
-            android:exported="true"
+            android:exported="false"
             android:screenOrientation="portrait"></activity>
         <activity
             android:name=".futureclass"

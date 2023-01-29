@@ -14,7 +14,6 @@ import android.widget.TextView;
 public class SplashActivity extends AppCompatActivity {
     TextView textView,textView1;
     ImageView imageView;
-    Animation animationUptoDown , animationDownToUp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +29,6 @@ public class SplashActivity extends AppCompatActivity {
                 overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
                 finish();
             }
-        },800);
+        },600);
     }
 }
